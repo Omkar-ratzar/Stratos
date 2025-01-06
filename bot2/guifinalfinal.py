@@ -6,7 +6,7 @@ from elevenlabs import voices, generate
 import pyaudio
 import pygame
 
-client = Groq(api_key="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")
+client = Groq(api_key="GROQAPI")
 
 # Function to execute the command
 def execute_command(command):
@@ -77,7 +77,7 @@ def main_processing_function():
         audio = generate(
             text=explanation,
             voice="Lily",
-            api_key="sk_0d86ca6a5ca581587348fbedff77531fa3c4544fe4d1e547"
+            api_key="ELEVENLABSAPI"
         )
 
         with open("output.wav", "wb") as f:
@@ -105,7 +105,7 @@ def main_processing_function():
         audio = generate(
             text=response,
             voice="Lily",
-            api_key="sk_0d86ca6a5ca581587348fbedff77531fa3c4544fe4d1e547"
+            api_key="ELEVENLABSAPI"
         )
 
         with open("output.wav", "wb") as f:
