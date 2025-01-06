@@ -1,0 +1,13 @@
+ok so this is list of best text to speech or speech to text python codes in my directory
+
+text to speech -->
+NT2S.py
+but the thing is, this generates a wav file which needs to be reconverted using
+ ffmpeg -i "natural.wav" -acodec pcm_s16le -ar 44100 -ac 2 CONVERTED.wav
+
+CONVERTED.wav is the one which is better to be used as it has better file inegrity
+
+now, speech to text -->
+S2T2.py. Feed this program CONVERTED.wav file heh!
+
+

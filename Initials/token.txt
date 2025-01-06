@@ -1,0 +1,37 @@
+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
+-->Huggingface
+
+sk_0d86ca6a5ca581587348fbedff77531fa3c4544fe4d1e547
+--> elevenlabs
+
+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
+--> groq
+
+export GROQ_API_KEY=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
+
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# Load the model
+model_name = "meta-llama/LLaMA-3B"  # Replace with your model name
+tokenizer = AutoTokenizer.from_pretrained(model_name, token="YOUR_HUGGINGFACE_TOKEN")
+model = AutoModelForCausalLM.from_pretrained(model_name, token="YOUR_HUGGINGFACE_TOKEN")
+
+# Define the prompt
+prompt = (
+    "Write a PowerShell script that monitors CPU usage using the `Get-Counter` cmdlet "
+    "every 5 seconds and appends the output to a file named `cpu_log.txt`."
+)
+
+# Generate the output
+inputs = tokenizer(prompt, return_tensors="pt")
+outputs = model.generate(
+    **inputs,
+    max_length=150,
+    temperature=0.5,
+    top_p=0.9,
+    pad_token_id=tokenizer.eos_token_id,
+)
+
+# Decode and print the result
+powershell_script = tokenizer.decode(outputs[0], skip_special_tokens=True)
+print(powershell_script)
