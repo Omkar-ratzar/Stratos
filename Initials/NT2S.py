@@ -10,7 +10,7 @@ print(available_voices)
 audio = generate(
     text="I just woke up dreaming about you",
     voice="Lily",
-    api_key="sk_0d86ca6a5ca581587348fbedff77531fa3c4544fe4d1e547"
+    api_key="API"
 )
 #Play the audio
 with open("output.wav", "wb") as f:
