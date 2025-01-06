@@ -90,7 +90,7 @@ def main_p():
         audio = generate(
             text=explanation,
             voice="Lily",
-            api_key="sk_0d86ca6a5ca581587348fbedff77531fa3c4544fe4d1e547"
+            api_key="ELEVENLABSAPI"
         )
 
         with open("output.wav", "wb") as f:
@@ -119,7 +119,7 @@ def main_p():
         audio = generate(
             text=response,
             voice="Lily",
-            api_key="sk_0d86ca6a5ca581587348fbedff77531fa3c4544fe4d1e547"
+            api_key="ELEVENLABSAPI"
         )
 
         with open("output.wav", "wb") as f:
