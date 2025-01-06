@@ -3,7 +3,7 @@ import os
 from groq import Groq
 
 client = Groq(
-    api_key=("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"),
+    api_key=("API"),
 )
 def execute_command(command):
     result = os.popen(command).read()
