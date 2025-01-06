@@ -1,13 +1,3 @@
-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
--->Huggingface
-
-sk_0d86ca6a5ca581587348fbedff77531fa3c4544fe4d1e547
---> elevenlabs
-
-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
---> groq
-
-export GROQ_API_KEY=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
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
