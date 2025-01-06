@@ -37,7 +37,7 @@ def playwav(fpath):
 
 
 
-client = Groq(api_key="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")
+client = Groq(api_key="API")
 # Main processing function
 def main_processing_function(text=None):
     recognizer = sr.Recognizer()
@@ -83,7 +83,7 @@ def main_processing_function(text=None):
         audio = generate(
             text=explanation,
             voice="Lily",
-            api_key="sk_8010becc719601aa3273d6d086b79952b666c57d52f898f5",
+            api_key="API",
         )
 
         with open("output.wav", "wb") as f:
@@ -105,7 +105,7 @@ def main_processing_function(text=None):
         audio = generate(
             text=response,
             voice="Lily",
-            api_key="sk_8010becc719601aa3273d6d086b79952b666c57d52f898f5",
+            api_key="API",
         )
 
         with open("output.wav", "wb") as f:
