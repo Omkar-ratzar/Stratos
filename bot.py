@@ -1,7 +1,7 @@
 import os
 from groq import Groq
 client = Groq(
-    api_key=("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"),
+    api_key=("GROQ_API"),
 )
 
 def execute_command(command):
@@ -58,7 +58,7 @@ if("stratos" in text):
         # text=chat_completion.choices[0].message.content,
         text=tempexplainaudio,
         voice="Lily",
-        api_key="sk_0d86ca6a5ca581587348fbedff77531fa3c4544fe4d1e547"
+        api_key="ELEVENLABSAPI"
     )
     #Play the audio
     with open("output.wav", "wb") as f:
@@ -92,7 +92,7 @@ else:
     audio = generate(
         text=chat_completion.choices[0].message.content,
         voice="Lily",
-        api_key="sk_0d86ca6a5ca581587348fbedff77531fa3c4544fe4d1e547"
+        api_key="ELEVENLABSAPI"
     )
     #Play the audio
     with open("output.wav", "wb") as f:
